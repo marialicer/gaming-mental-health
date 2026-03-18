@@ -61,10 +61,30 @@ plt.show()
 
 ## 1.2 quem joga mais? GÊNERO
 
+media_por_sexo = df.groupby('gender', as_index=False)['daily_gaming_hours'].mean() 
 
-
+media_por_sexo.head()
 
 # %%
+plt.bar(
+    media_por_sexo['gender'],
+    media_por_sexo['daily_gaming_hours'],
+    color='blue'
+)
+
+plt.xlabel('Gênero')
+plt.ylabel('Quantidade de horas jogadas')
+plt.title('Qual gênero joga mais?')
+
+for i, value in enumerate(media_por_sexo['daily_gaming_hours']):
+    plt.text(i, value + 0.1, f'{value:.1f}', ha='center')
+
+plt.savefig("../img/horas_jogadas_genero.png")
+
+plt.show()
+#%%
+
+
 
 # 2. GAMING vs saúde mental
 
