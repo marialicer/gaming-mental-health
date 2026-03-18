@@ -136,7 +136,7 @@ plt.title('Pessoas que jogam mais dormem menos?')
 for i, value in enumerate(sono_horas_jogadas['sleep_hours']):
     plt.text(i, value + 0.1, f'{value:.1f}', ha='center')
 
-plt.savefig("../img/sono_horas_jogadas.png")
+plt.savefig("../img/sono_horas_jogadas_ver2.png")
 
 plt.show()
 # %%
