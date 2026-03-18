@@ -84,7 +84,23 @@ plt.savefig("../img/horas_jogadas_genero.png")
 plt.show()
 #%%
 
+media_jogo_dia = df['daily_gaming_hours'].mean()
 
+print (media_jogo_dia)
+
+# %%
+## 1.3 Quantas horas por dia as pessoas jogam?
+
+plt.title('Quantas horas por dia as pessoas jogam?')
+plt.xlabel('Horas de jogo')
+plt.ylabel('Frequência Absoluta')
+plt.hist(df['daily_gaming_hours'], rwidth=0.9, color= 'indianred', edgecolor = 'black')
+
+plt.savefig("../img/horas_jogo_dia.png")
+
+plt.show()
+
+# %%
 
 # 2. GAMING vs saúde mental
 
