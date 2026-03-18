@@ -43,7 +43,7 @@ plt.barh(
     color='lightgreen'
 )
 
-plt.xlabel('Horas jogadas')
+plt.xlabel('Média de horas jogadas')
 plt.ylabel('Faixa de idade')
 plt.title('Quais faixas etárias mais jogam?')
 
@@ -73,7 +73,7 @@ plt.bar(
 )
 
 plt.xlabel('Gênero')
-plt.ylabel('Quantidade de horas jogadas')
+plt.ylabel('Média de horas jogadas')
 plt.title('Qual gênero joga mais?')
 
 for i, value in enumerate(media_por_sexo['daily_gaming_hours']):
