@@ -104,19 +104,21 @@ plt.show()
 
 # %%
 
-# 2. GAMING vs saúde mental
+# 2. GAMING vs estilo de vida
 
 ## 2.1 quem joga mais dorme menos?
 
 df['faixa_jogo'] = pd.cut(
     df['daily_gaming_hours'],
-    bins=[0, 1, 2, 3, 5, 10],
-    labels=['0-1h', '1-2h', '2-3h', '3-5h', '5h+']
+    bins=[0, 1, 2, 3, 5, 10, float('inf')],
+    labels=['0-1h', '1-2h', '2-3h', '3-5h', '5-10h', '10h+'],
+    include_lowest=True
 )
 
 sono_horas_jogadas = df.groupby('faixa_jogo', as_index=False)['sleep_hours'].mean()
 
 sono_horas_jogadas.head()
+
 # %%
 
 ## plotar o gráfico horas jogadas x sono
@@ -163,6 +165,46 @@ plt.xlabel("Qualidade do sono")
 plt.ylabel("Horas de jogo")
 
 plt.savefig("../img/qualidade_sono.png")
+
+plt.show()
+
+# %%
+
+## 2.3 Pessoas com mais tempo offline são mais felizes?
+
+## Transformando o humor em uma escala de felicidade
+
+df['happiness_score'] = df['mood_state'].map({
+    "Depressed": 'Baixo',
+    "Withdrawn": 'Baixo',
+    "Anxious": 'Baixo',
+    "Irritable": 'Baixo',
+    "Angry": "Baixo",
+    "Restless": 'Médio',
+    "Normal": 'Médio',
+    "Excited": 'Alto',
+    "Euphoric": 'Alto'
+})
+
+#%%
+
+tempo_off = df.groupby('happiness_score', as_index=False)['face_to_face_social_hours_weekly'].mean()
+tempo_off.head()
+
+# %%
+
+tempo_off = df.groupby('happiness_score')['face_to_face_social_hours_weekly'].mean()
+
+plt.bar(tempo_off.index, tempo_off.values, color='orange')
+
+plt.xlabel('Nível de felicidade')
+plt.ylabel('Tempo offline (média)')
+plt.title('Mais tempo offline está associado à felicidade?')
+
+for i, value in enumerate(tempo_off.values):
+    plt.text(i, value + 0.1, f'{value:.1f}', ha='center')
+
+plt.savefig("../img/tempo_off_felicidade.png")
 
 plt.show()
 
