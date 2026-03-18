@@ -96,9 +96,11 @@ plt.xlabel('Horas de jogo')
 plt.ylabel('Frequência Absoluta')
 plt.hist(df['daily_gaming_hours'], rwidth=0.9, color= 'indianred', edgecolor = 'black')
 
+
 plt.savefig("../img/horas_jogo_dia.png")
 
 plt.show()
+
 
 # %%
 
@@ -137,3 +139,31 @@ plt.savefig("../img/sono_horas_jogadas.png")
 plt.show()
 # %%
 
+## 2.2 Jogar mais afeta a qualidade de sono?
+
+paleta_de_cores = ['#2ecc71', '#a3e635', '#facc15', '#fb923c', '#ef4444']
+
+sns.boxplot(
+    x=df['sleep_quality'].map({
+        "Good": "Boa",
+        "Fair": "Regular",
+        "Poor": "Ruim",
+        "Very Poor": "Muito ruim",
+        "Insomnia": "Insônia"
+    }),
+    y='daily_gaming_hours',
+    data=df,
+    showfliers=False, 
+    order=['Boa', "Regular", "Ruim","Muito ruim", "Insônia"],
+    palette=paleta_de_cores
+)
+
+plt.title("Jogar mais afeta a qualidade do sono?")
+plt.xlabel("Qualidade do sono")
+plt.ylabel("Horas de jogo")
+
+plt.savefig("../img/qualidade_sono.png")
+
+plt.show()
+
+# %%
