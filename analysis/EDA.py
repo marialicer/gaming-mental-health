@@ -322,7 +322,7 @@ plt.show()
 
 ## sleep_quality x social_isolation_score
 
-paleta_de_cores = sns.color_palette("coolwarm", 9)
+paleta_de_cores = sns.color_palette("vlag", 5)
 
 plt.figure(figsize=(12, 6))
 
@@ -355,7 +355,7 @@ plt.show()
 
 ## daily_gaming_hours x academic_work_performance
 
-paleta_de_cores = sns.color_palette("coolwarm", 9)
+paleta_de_cores = sns.color_palette("vlag", 9)
 
 plt.figure(figsize=(12, 6))
 
