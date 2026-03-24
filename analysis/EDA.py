@@ -350,7 +350,7 @@ plt.savefig("../img/qualidade_sono_isolamento.png")
 plt.show()
 # %%
 
-## 4. Impacto na vida real (estudo e trabalho)
+## 4. Impacto na vida real
 ## O comportamento de jogo afeta desempenho acadêmico e produtividade?
 
 ## daily_gaming_hours x academic_work_performance
@@ -445,7 +445,7 @@ plt.show()
 
 # %%
 
-## comparar médias (resumo executivo)
+## comparar médias
 
 df.groupby('risco_vicio')[
     ['daily_gaming_hours',
@@ -471,7 +471,4 @@ plt.title("Heatmap de correlação")
 plt.savefig("../img/heatmap_correlacao.png")
 
 plt.show()
-# %%
-
-df["sleep_hours"].describe()
 # %%
