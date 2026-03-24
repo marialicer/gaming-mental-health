@@ -468,6 +468,8 @@ sns.heatmap(
 
 plt.title("Heatmap de correlação")
 
+plt.tight_layout()
+
 plt.savefig("../img/heatmap_correlacao.png")
 
 plt.show()
