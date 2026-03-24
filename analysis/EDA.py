@@ -53,11 +53,13 @@ plt.title("Distribuição de horas diárias de jogo")
 plt.xlabel("Tempo diário de jogo")
 plt.ylabel("Frequência")
 
+plt.savefig("../img/distribuicao_tempo_jogo.png")
+
 plt.show()
 
 # %%
 
-## Distribuição de tempo de jogo
+## Distribuição de tempo de sono
 
 plt.figure(figsize=(8,5))
 
@@ -71,6 +73,30 @@ sns.histplot(
 plt.title("Distribuição de horas de sono")
 plt.xlabel("Horas de sono")
 plt.ylabel("Frequência")
+
+plt.savefig("../img/distribuicao_tempo_sono.png")
+
+plt.show()
+
+# %%
+
+## Distribuição de gênero
+
+plt.figure(figsize=(6,4))
+sns.countplot(
+    x=df["gender"].map({
+        "Male": "Masculino",
+        "Female": "Feminino",
+        "Other": "Outros"
+    }),
+    data=df
+)
+
+plt.title("Distribuição de Gênero")
+plt.xlabel("Gênero")
+plt.ylabel("Frequência")
+
+plt.savefig("../img/distribuicao_genero.png")
 
 plt.show()
 
@@ -427,11 +453,6 @@ df.groupby('risco_vicio')[
      'monthly_game_spending_usd',
      'social_isolation_score']
 ].mean()
-# %%
-
-df = df.drop(columns=['risk_encoded'])
-
-
 #%%
 
 ## heatmap de correlação
