@@ -472,3 +472,6 @@ plt.savefig("../img/heatmap_correlacao.png")
 
 plt.show()
 # %%
+
+df["sleep_hours"].describe()
+# %%

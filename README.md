@@ -81,3 +81,20 @@ Tradução de variáveis booleanas
 
 1. Distribuições
 
+- Distribuição de tempo de jogo
+
+![Distribuição de tempo de jogo](img/distribuicao_tempo_jogo.png)
+
+📌 A maior parte dos jogadores, joga de 4 a 8 horas por dia, com uma média total de 6 horas diárias. Há jogadores que chegam a passar 15h+ jogando.
+
+- Distribuição de tempo de sono
+
+![Distribuição de tempo de sono](img/distribuicao_tempo_sono.png)
+
+📌 A distribuição de sono mostra que a maior parte dos jogadores dorme menos de 7 horas por noite. O terceiro quartil (75%) está em aproximadamente 6,6 horas, indicando que apenas uma pequena parcela atinge níveis mais elevados de descanso.
+
+- Distribuição de gênero
+
+📌 A maior parte dos jogadores do conjunto de dados pertence ao sexo masculino, já pessoas do gênero feminino passam dos 30%.
+
+2. 
