@@ -322,7 +322,7 @@ plt.show()
 
 ## sleep_quality x social_isolation_score
 
-paleta_de_cores = sns.color_palette("vlag", 5)
+paleta_de_cores = sns.diverging_palette(145, 300, s=60, n=5)
 
 plt.figure(figsize=(12, 6))
 
