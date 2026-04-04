@@ -217,5 +217,5 @@ Tradução de variáveis booleanas
 ## Autora
 
 Maria Alice Rocha<br>
-Jornalista e pós graduanda em Analytics e BI<br>
+Jornalista e pós graduada em Analytics e Business Intelligence<br>
 Foco em análise de dados, storytelling, ciência de dados e insights acionáveis<br>
