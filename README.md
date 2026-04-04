@@ -1,29 +1,15 @@
-# Gaming \& Mental Health Analysis
-
-
+# Gaming & Mental Health — Análise Exploratória de Dados
 
 Análise exploratória de dados (EDA) sobre a relação entre tempo de jogo, saúde mental, sono e impactos na vida real, com foco em identificar padrões de comportamento e possíveis riscos associados ao uso excessivo de jogos.
 
+## Contexto de Negócio
 
-
+- O uso de jogos eletrônicos cresce globalmente, mas seus impactos na saúde mental e na qualidade de vida ainda são pouco compreendidos de forma quantitativa
+- Profissionais de saúde, pesquisadores e plataformas de jogos carecem de análises baseadas em dados para identificar padrões de risco e estabelecer limites de uso saudável
+- Sem uma visão clara sobre quais comportamentos estão associados ao vício e ao declínio da saúde mental, é difícil desenvolver intervenções eficazes
 
 
 ## Objetivo do Projeto
-
-
-
-Investigar como o tempo gasto em jogos pode influenciar:
-
-
-
-- Saúde mental (humor, ansiedade, depressão)
-- Qualidade e duração do sono
-- Isolamento social
-- Desempenho acadêmico e produtividade
-- Risco de vício em jogos
-
-
-## Este projeto busca responder:
 
 - Mais horas de jogo estão associadas a pior saúde mental?
 - Existe um “limite seguro” de horas jogadas por dia?
@@ -44,14 +30,11 @@ Dados incluem:<br>
 - Produtividade e desempenho acadêmico
 - Indicadores de dependência em jogos
 
-## Tecnologias Utilizadas
+## Ferramentas Utilizadas
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-
+- Python, Pandas, NumPy, Matplotlib, Seaborn
+- Análise Exploratória de Dados
+- Engenharia de features (faixas de horas, variáveis derivadas)
 
 ## Tratamento de Dados
 
@@ -186,17 +169,16 @@ Tradução de variáveis booleanas
 
 ![Correlação entre variáveis](img/heatmap_correlacao.png)
 
-- **Fortes Correlações Positivas**
+### Correlações mais relevantes
 
-- Horas de Jogo x Isolamento Social (0.88)
-- Horas de Jogo x Gastos Mensais (0.69)
-- Horas de Jogo x Mudança de Peso (0.50)
-
-- **Fortes Correlações Negativas**
-
-- Horas de Jogo x Interação Social Presencial (-0.89):
-- Horas de Jogo x Exercícios Físicos (-0.76)
-- Horas de Jogo x Horas de Sono (-0.74)
+| Variáveis | Correlação |
+|---|---|
+| Horas de jogo × Isolamento social | +0,88 |
+| Horas de jogo × Interação social presencial | −0,89 |
+| Horas de jogo × Exercícios físicos | −0,76 |
+| Horas de jogo × Horas de sono | −0,74 |
+| Horas de jogo × Gastos mensais | +0,69 |
+| Horas de jogo × Mudança de peso | +0,50 |
 
 ---
 
